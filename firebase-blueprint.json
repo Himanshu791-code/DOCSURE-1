@@ -1,0 +1,151 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "System user account with role-based access control.",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string", "maxLength": 128 },
+        "email": { "type": "string", "maxLength": 256 },
+        "displayName": { "type": "string", "maxLength": 128 },
+        "role": { "type": "string", "enum": ["admin", "officer", "applicant"] },
+        "institutionId": { "type": "string", "maxLength": 64 },
+        "createdAt": { "type": "string" },
+        "isDemoUser": { "type": "boolean" }
+      },
+      "required": ["uid", "email", "role"]
+    },
+    "Institution": {
+      "title": "Institution",
+      "description": "Academic technical institution seeking AICTE EoA approval.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 64 },
+        "name": { "type": "string", "maxLength": 256 },
+        "pid": { "type": "string", "maxLength": 32 },
+        "region": { "type": "string", "maxLength": 64 },
+        "state": { "type": "string", "maxLength": 64 },
+        "applicantUid": { "type": "string", "maxLength": 128 },
+        "isDemo": { "type": "boolean" }
+      },
+      "required": ["id", "name", "pid", "region"]
+    },
+    "Application": {
+      "title": "Application",
+      "description": "Statutory EoA regulatory audit application record.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 64 },
+        "institutionId": { "type": "string", "maxLength": 64 },
+        "dossierRef": { "type": "string", "maxLength": 64 },
+        "session": { "type": "string", "maxLength": 32 },
+        "status": { "type": "string", "enum": ["draft", "submitted", "under_scrutiny", "flagged", "approved", "rejected"] },
+        "riskScore": { "type": "number" },
+        "assignedOfficerUid": { "type": "string", "maxLength": 128 },
+        "acknowledged": { "type": "boolean" },
+        "updatedAt": { "type": "string" },
+        "isDemo": { "type": "boolean" }
+      },
+      "required": ["id", "institutionId", "dossierRef", "status"]
+    },
+    "Document": {
+      "title": "Document",
+      "description": "Statutory document evidence uploaded for AICTE audit.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 64 },
+        "applicationId": { "type": "string", "maxLength": 64 },
+        "number": { "type": "string", "maxLength": 16 },
+        "title": { "type": "string", "maxLength": 256 },
+        "docType": { "type": "string", "maxLength": 64 },
+        "authority": { "type": "string", "maxLength": 128 },
+        "status": { "type": "string", "enum": ["verified", "flawed", "deficient", "scanning", "pending"] },
+        "sha256Hash": { "type": "string", "maxLength": 64 },
+        "confidence": { "type": "number" },
+        "uploadedAt": { "type": "string" },
+        "note": { "type": "string", "maxLength": 512 }
+      },
+      "required": ["id", "applicationId", "title", "status"]
+    },
+    "ConsistencyCheck": {
+      "title": "ConsistencyCheck",
+      "description": "Cross-document invariant consistency validation entry.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 64 },
+        "applicationId": { "type": "string", "maxLength": 64 },
+        "parameterNumber": { "type": "number" },
+        "parameterName": { "type": "string", "maxLength": 128 },
+        "status": { "type": "string", "enum": ["verified", "mismatch", "needs_review", "pending"] },
+        "portalValue": { "type": "string", "maxLength": 256 },
+        "deedValue": { "type": "string", "maxLength": 256 },
+        "trustCertValue": { "type": "string", "maxLength": 256 },
+        "fireNocValue": { "type": "string", "maxLength": 256 },
+        "sanctionValue": { "type": "string", "maxLength": 256 },
+        "varianceText": { "type": "string", "maxLength": 512 }
+      },
+      "required": ["id", "applicationId", "parameterName", "status"]
+    },
+    "Adjudication": {
+      "title": "Adjudication",
+      "description": "Senior scrutiny officer formal decision and legal observation.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 64 },
+        "applicationId": { "type": "string", "maxLength": 64 },
+        "officerUid": { "type": "string", "maxLength": 128 },
+        "officerName": { "type": "string", "maxLength": 128 },
+        "decision": { "type": "string", "enum": ["pending", "show_cause", "override", "accept"] },
+        "notes": { "type": "string", "maxLength": 2048 },
+        "timestamp": { "type": "string" },
+        "proofHash": { "type": "string", "maxLength": 128 }
+      },
+      "required": ["id", "applicationId", "decision", "notes"]
+    },
+    "AuditLog": {
+      "title": "AuditLog",
+      "description": "Immutable ledger record for forensic traceability.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 64 },
+        "applicationId": { "type": "string", "maxLength": 64 },
+        "actorUid": { "type": "string", "maxLength": 128 },
+        "actorRole": { "type": "string", "maxLength": 32 },
+        "action": { "type": "string", "maxLength": 128 },
+        "details": { "type": "string", "maxLength": 1024 },
+        "timestamp": { "type": "string" }
+      },
+      "required": ["id", "action", "timestamp"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": { "$ref": "#/entities/User" },
+      "description": "Registered and authenticated users with system roles."
+    },
+    "/institutions/{institutionId}": {
+      "schema": { "$ref": "#/entities/Institution" },
+      "description": "Academic institutions under AICTE regulatory governance."
+    },
+    "/applications/{applicationId}": {
+      "schema": { "$ref": "#/entities/Application" },
+      "description": "Institutional regulatory dossier applications."
+    },
+    "/applications/{applicationId}/documents/{documentId}": {
+      "schema": { "$ref": "#/entities/Document" },
+      "description": "Submitted statutory instruments and OCR extractions."
+    },
+    "/applications/{applicationId}/consistency_checks/{checkId}": {
+      "schema": { "$ref": "#/entities/ConsistencyCheck" },
+      "description": "Cross-document invariant checks and discrepancy audits."
+    },
+    "/applications/{applicationId}/adjudications/{adjudicationId}": {
+      "schema": { "$ref": "#/entities/Adjudication" },
+      "description": "Official scrutiny committee hearing decisions and notes."
+    },
+    "/audit_logs/{logId}": {
+      "schema": { "$ref": "#/entities/AuditLog" },
+      "description": "Immutable statutory audit trail."
+    }
+  }
+}

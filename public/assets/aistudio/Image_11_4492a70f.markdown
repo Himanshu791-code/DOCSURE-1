@@ -1,0 +1,256 @@
+---
+name: Institutional Compliance Editorial
+colors:
+  surface: '#fef9f0'
+  surface-dim: '#ded9d1'
+  surface-bright: '#fef9f0'
+  surface-container-lowest: '#ffffff'
+  surface-container-low: '#f8f3ea'
+  surface-container: '#f2ede4'
+  surface-container-high: '#ece8df'
+  surface-container-highest: '#e7e2d9'
+  on-surface: '#1d1c16'
+  on-surface-variant: '#404848'
+  inverse-surface: '#32302a'
+  inverse-on-surface: '#f5f0e7'
+  outline: '#717978'
+  outline-variant: '#c0c8c8'
+  surface-tint: '#3b6566'
+  primary: '#002627'
+  on-primary: '#ffffff'
+  primary-container: '#0f3d3e'
+  on-primary-container: '#7da8a8'
+  inverse-primary: '#a3cfcf'
+  secondary: '#775928'
+  on-secondary: '#ffffff'
+  secondary-container: '#ffd79b'
+  on-secondary-container: '#7a5c2b'
+  tertiary: '#15232e'
+  on-tertiary: '#ffffff'
+  tertiary-container: '#2a3844'
+  on-tertiary-container: '#93a1b0'
+  error: '#ba1a1a'
+  on-error: '#ffffff'
+  error-container: '#ffdad6'
+  on-error-container: '#93000a'
+  primary-fixed: '#beebeb'
+  primary-fixed-dim: '#a3cfcf'
+  on-primary-fixed: '#002020'
+  on-primary-fixed-variant: '#224d4e'
+  secondary-fixed: '#ffdeae'
+  secondary-fixed-dim: '#e8c086'
+  on-secondary-fixed: '#281800'
+  on-secondary-fixed-variant: '#5d4213'
+  tertiary-fixed: '#d5e4f4'
+  tertiary-fixed-dim: '#bac8d7'
+  on-tertiary-fixed: '#0f1d28'
+  on-tertiary-fixed-variant: '#3a4855'
+  background: '#fef9f0'
+  on-background: '#1d1c16'
+  surface-variant: '#e7e2d9'
+typography:
+  display:
+    fontFamily: Newsreader
+    fontSize: 2.75rem
+    fontWeight: '400'
+    lineHeight: 3.25rem
+    letterSpacing: -0.02em
+  display-mobile:
+    fontFamily: Newsreader
+    fontSize: 2rem
+    fontWeight: '400'
+    lineHeight: 2.5rem
+    letterSpacing: -0.015em
+  headline-lg:
+    fontFamily: Newsreader
+    fontSize: 2.25rem
+    fontWeight: '400'
+    lineHeight: 2.75rem
+    letterSpacing: -0.015em
+  headline-lg-mobile:
+    fontFamily: Newsreader
+    fontSize: 1.75rem
+    fontWeight: '400'
+    lineHeight: 2.25rem
+    letterSpacing: -0.01em
+  headline-md:
+    fontFamily: Newsreader
+    fontSize: 1.75rem
+    fontWeight: '500'
+    lineHeight: 2.25rem
+    letterSpacing: -0.01em
+  headline-sm:
+    fontFamily: Newsreader
+    fontSize: 1.375rem
+    fontWeight: '500'
+    lineHeight: 1.75rem
+    letterSpacing: -0.005em
+  title-editorial:
+    fontFamily: Newsreader
+    fontSize: 1.125rem
+    fontWeight: '400'
+    lineHeight: 1.625rem
+  body-lg:
+    fontFamily: Inter
+    fontSize: 1rem
+    fontWeight: '400'
+    lineHeight: 1.6rem
+    letterSpacing: -0.005em
+  body-md:
+    fontFamily: Inter
+    fontSize: 0.875rem
+    fontWeight: '400'
+    lineHeight: 1.45rem
+  body-sm:
+    fontFamily: Inter
+    fontSize: 0.8125rem
+    fontWeight: '400'
+    lineHeight: 1.35rem
+  label-eyebrow:
+    fontFamily: Inter
+    fontSize: 0.6875rem
+    fontWeight: '600'
+    lineHeight: 1rem
+    letterSpacing: 0.14em
+  label-code:
+    fontFamily: JetBrains Mono
+    fontSize: 0.8125rem
+    fontWeight: '400'
+    lineHeight: 1.25rem
+    letterSpacing: -0.01em
+  data-numeric:
+    fontFamily: JetBrains Mono
+    fontSize: 0.875rem
+    fontWeight: '500'
+    lineHeight: 1.25rem
+    letterSpacing: '0'
+  caption:
+    fontFamily: Inter
+    fontSize: 0.75rem
+    fontWeight: '400'
+    lineHeight: 1.125rem
+rounded:
+  sm: 0.125rem
+  DEFAULT: 0.25rem
+  md: 0.375rem
+  lg: 0.5rem
+  xl: 0.75rem
+  full: 9999px
+spacing:
+  gutter: 1.5rem
+  gutter-lg: 2.5rem
+  margin: 1.5rem
+  margin-md: 2.5rem
+  margin-lg: 4rem
+  space-xs: 0.25rem
+  space-sm: 0.5rem
+  space-md: 1rem
+  space-lg: 1.5rem
+  space-xl: 2.25rem
+---
+
+## Brand & Style
+
+This design system embodies the gravitas, exacting precision, and quiet authority of archival legal folios, sovereign regulatory gazettes, and prestige financial audits. Tailored for statutory institutional scrutiny (such as AICTE compliance and accreditation validation), the interface deliberately eschews tech-industry tropes—no luminous drop-shadows, hyper-saturated neon accents, or bubbly pill shapes exist here.
+
+Instead, the aesthetic is deeply editorial and classical:
+- **Tone & Mood**: Scholarly, incorruptible, forensic, and understated. Interactions carry the deliberate weight of a physical ledger or an official gazette.
+- **Visual Stance**: Swiss-editorial layout discipline governed by structured columns, fine hairline rules, subtle paper warmth, and typographical counterpoints between high-contrast serifs, clean grotesque sans-serifs, and tabular monospaced metadata.
+- **Editorial Flourishes**: Numbered chapter-style markers (`01`, `02`, `03.1`), wide-tracked uppercase section eyebrows, and mixed roman/italic treatments for legal clauses and judicial notes.
+
+## Colors
+
+The palette establishes an intellectual, tactile reading environment evoking unbleached rag paper, archival bookcloth bindings, and deep printer’s ink.
+
+### Palette Architecture
+- **Canvas & Backgrounds**:
+  - `canvas-default`: `#F4EFE6` (Warm archival parchment)
+  - `surface-elevated`: `#FCFAF6` (Crisp bleached vellum for primary inspection panes)
+  - `surface-recessed`: `#F7F3EB` (Sandstone cream for secondary sidecars, trays, and headers)
+  - `surface-subtle`: `#EFE9DC` (Warm bone for row shading and nested clause groupings)
+- **Primary Ink & Structure**:
+  - `brand-primary`: `#0F3D3E` (Deep forest teal; represents primary institutional actions and certified seals)
+  - `ink-primary`: `#12202B` (Deep ink navy; primary typography, structural borders, and dark iconography)
+  - `ink-secondary`: `#4A5860` (Mid-tone lead ink for subtext, secondary data, and annotations)
+  - `ink-muted`: `#7C878C` (Dry graphite for footnotes, inactive states, and clause counters)
+- **Accents & Ornamentation**:
+  - `accent-brass`: `#B08D57` (Muted antique brass; used for bookmarking, active tabs, seal filigrees, and editorial accents)
+  - `accent-brass-wash`: `rgba(176, 141, 87, 0.12)` (Tinted backing for highlighted provisions)
+  - `accent-sage`: `#A9B8A3` (Soft sage for passive administrative review)
+  - `accent-clay`: `#C9A38B` (Dusty clay for architectural or land-asset validations)
+- **Borders & Dividers**:
+  - `border-hairline`: `#E2DACB` (Opaque warm linen rule)
+  - `border-ink-subtle`: `rgba(18, 32, 43, 0.12)` (Hairline ink rule for high precision data matrices)
+  - `border-ink-strong`: `rgba(18, 32, 43, 0.28)` (Section delineators and table frame heads)
+- **Forensic Compliance & Status Roles**:
+  - `status-pass`: `#436436` (Desaturated olive leaf; verified compliance)
+  - `status-pass-bg`: `rgba(67, 100, 54, 0.08)`
+  - `status-warning`: `#C07D32` (Amber ochre; inspection discrepancy / conditional cure)
+  - `status-warning-bg`: `rgba(192, 125, 50, 0.09)`
+  - `status-danger`: `#A63D33` (Archival brick red; statutory violation / audit shortfall)
+  - `status-danger-bg`: `rgba(166, 61, 51, 0.08)`
+
+## Typography
+
+The typographical hierarchy is calibrated like a legal monograph: high-contrast literary serif headlines paired with a disciplined, neutral grotesque body and an unflinching monospaced engine for forensic data.
+
+### Roles and Application
+- **Headlines (`Newsreader`)**: Conveys established authority. Use roman for institutional sections and italic styles sparingly to indicate statutory definitions, verified legal quotes, or official AICTE handbook citations.
+- **Body (`Inter`)**: Set with open line-height to maintain comfortable reading during multi-page document reviews. Numbers within running editorial body should remain clean and unobtrusive.
+- **Data, Clauses & Identifiers (`JetBrains Mono`)**: Applied to AICTE Approval Process Handbook (APH) clause markers (`APH-2024-C.6`), document SHA-256 hashes, geo-coordinate verification stamps, faculty registration IDs, and numerical square-footage calculations.
+- **Eyebrow Headers**: Formatted in `Inter`, all caps, with generous tracking (`0.14em`) to act as archival index tabs preceding article blocks.
+
+## Layout & Spacing
+
+The layout adheres to a classical Swiss asymmetrical grid, treating the viewport as a double-spread folio. Content balances wide analytical dossiers with dense, tabular inspection sheets.
+
+### Grid Construction
+- **Desktop (1280px+)**: 12-column grid with a fixed left-hand statutory rail (3 columns or 280px) for institutional identifiers and document status summary, flanked by an 8 or 9-column audit folio. Section gutters are set to `2.5rem` (`gutter-lg`) to prevent dense legal text from crowding out evidence data.
+- **Tablet (768px – 1279px)**: 8-column grid with `1.5rem` (`gutter`) and `2.5rem` canvas margins. Sidebars collapse into accordion dossiers stacked sequentially above the evidence matrices.
+- **Mobile (< 768px)**: 4-column fluid layout with `1rem` column gutters and `1.5rem` screen margins. Tabular compliance reports shift to stacked record cards with persistent index tags.
+
+### Architectural Rhythm
+- Structural divisions rely on clear spatial jumps (`space-xl`) paired with 1px hairline rules rather than heavy framing.
+- Internal component groupings (such as audit parameter keys and values) use tight vertical intervals (`space-xs` and `space-sm`) to retain dense tabular efficiency.
+
+## Elevation & Depth
+
+This system intentionally rejects 3D drop-shadows and glassmorphic blurs, prioritizing the clean, matte tactile presence of archival parchment and bonded ink.
+
+### Depth via Tonal Stratification
+- **Ground Floor**: The global page background is `#F4EFE6`.
+- **Card & Document Folios**: Raised to `#FCFAF6` with no blur shadow. Visual separation is accomplished exclusively by a crisp, 1px perimeter border in `#E2DACB` or `rgba(18, 32, 43, 0.12)`.
+- **Overlay & Modal Dossiers**: Floating panels, verification drawers, or PDF diffing panes use `#FCFAF6` surfaced against a backdrop overlay of `#12202B` at 40% opacity. Depth is denoted with a single, sharp stamp rule: a crisp 1px inset boundary and an ultra-subtle grounding shadow: `0 2px 0 0 rgba(18, 32, 43, 0.08)`.
+- **Subtle Plate Insets**: Well containers and secondary document previews use `#F7F3EB` with an interior 1px stroke, creating a recessed, letterpress indentation effect.
+
+## Shapes
+
+The shape system is strictly architectural and restrained (`roundedness: 1`). Radii must never exceed 2px to 4px. 
+
+- **Containers and Document Sheets**: Fixed at `2px` or `4px` maximum corner radius, preserving a razor-sharp, paper-cut appearance.
+- **Data Chips & Status Badges**: Strictly squared (`2px` border radius) or sharp (`0px`), directly rejecting circular pill geometries.
+- **Form Controls & Action Triggers**: Standardized to `2px` radius. This maintains precision alignment against data columns and hairline grid rules.
+
+## Components
+
+### Buttons & Intent Triggers
+- **Primary Action (Certification / Affirmation)**: Solid `#0F3D3E` fill, `#FCFAF6` typography, crisp 2px radius, and a 1px border in `#0F3D3E`. On hover, color transitions smoothly to `#12202B`.
+- **Secondary Action (Verification / Clause Review)**: Transparent background with a 1px hairline border in `rgba(18, 32, 43, 0.3)`. Text in `#12202B`. On hover: surface shifts to `#EFE9DC`.
+- **Accent Action (Affix Seal / Endorsement)**: Muted antique brass `#B08D57` text on an unbleached `#F7F3EB` surface with a 1px border in `#B08D57`.
+
+### Compliance Status Tags (Badges)
+- **Geometry**: Compact, 2px border radius, monospaced uppercase typography (`label-code`, 10px tracking `0.08em`).
+- **Pass (Compliant)**: `#436436` text on `#436436` at 8% opacity, bordered by 1px `#436436` at 30%. Accompanied by a square index icon `■`.
+- **Warning (Discrepancy / Incomplete)**: `#C07D32` text on `#C07D32` at 9% opacity, bordered by 1px `#C07D32` at 30%.
+- **High Risk (Deficiency)**: `#A63D33` text on `#A63D33` at 8% opacity, bordered by 1px `#A63D33` at 30%.
+
+### Form Inputs & Inspection Fields
+- **Base Style**: `#FCFAF6` background, bordered by 1px hairline in `#E2DACB`. Typography in `Inter` 14px. Focus state replaces hairline with a 1px solid stroke in `#0F3D3E` and a hairline inner offset, avoiding thick focus rings.
+- **Extracted OCR Field**: Monospaced font (`JetBrains Mono`) with a subtle `#F7F3EB` fill and an anchored right-hand status flag indicating AI / human verification state.
+
+### Dossier & Verification Cards
+- Flat surfaces (`#FCFAF6`) bound by 1px hairline borders (`#E2DACB`).
+- Structured header featuring a roman-numeral or numeric section marker (`01`, `02`), an all-caps tracking eyebrow, and an optional italicized regulatory reference.
+
+### Specialized Component: AICTE Clause Comparison Matrix
+- A dense split-view comparison table: Left pane houses statutory requirements (Newsreader / Inter); right pane houses submitted institutional proof and OCR extractions (JetBrains Mono). Alternating rows tinted with `#F7F3EB` at 50% opacity, bordered with hairline rules.

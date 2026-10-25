@@ -1,0 +1,6 @@
+{
+  "name": "Pramāṇa AI — AICTE Regulatory Audit System",
+  "description": "Explainable, human-in-the-loop regulatory validation intelligence for AICTE institutional affiliation, land title scrutiny, and statutory compliance.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

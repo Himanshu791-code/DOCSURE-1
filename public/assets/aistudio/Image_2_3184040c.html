@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-error": "#ffffff", "on-surface": "#1d1c16", "on-tertiary": "#ffffff", "surface-container": "#f2ede4", "surface": "#fef9f0", "primary": "#002627", "secondary-container": "#ffd79b", "on-tertiary-fixed": "#0f1d28", "on-primary-container": "#7da8a8", "on-secondary-fixed": "#281800", "inverse-surface": "#32302a", "outline": "#717978", "primary-fixed": "#beebeb", "error": "#ba1a1a", "surface-container-low": "#f8f3ea", "tertiary-fixed": "#d5e4f4", "on-primary-fixed-variant": "#224d4e", "on-surface-variant": "#404848", "on-primary-fixed": "#002020", "surface-container-highest": "#e7e2d9", "secondary": "#775928", "on-secondary": "#ffffff", "surface-variant": "#e7e2d9", "secondary-fixed-dim": "#e8c086", "on-secondary-container": "#7a5c2b", "primary-fixed-dim": "#a3cfcf", "on-error-container": "#93000a", "surface-dim": "#ded9d1", "surface-container-lowest": "#ffffff", "background": "#fef9f0", "surface-bright": "#fef9f0", "on-primary": "#ffffff", "on-tertiary-fixed-variant": "#3a4855", "tertiary-container": "#2a3844", "tertiary-fixed-dim": "#bac8d7", "error-container": "#ffdad6", "on-background": "#1d1c16", "primary-container": "#0f3d3e", "inverse-on-surface": "#f5f0e7", "surface-tint": "#3b6566", "tertiary": "#15232e", "on-secondary-fixed-variant": "#5d4213", "outline-variant": "#c0c8c8", "surface-container-high": "#ece8df", "secondary-fixed": "#ffdeae", "on-tertiary-container": "#93a1b0", "inverse-primary": "#a3cfcf" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "margin-md": "2.5rem", "space-lg": "1.5rem", "margin-lg": "4rem", "space-xl": "2.25rem", "gutter-lg": "2.5rem", "space-sm": "0.5rem", "gutter": "1.5rem", "space-md": "1rem", "space-xs": "0.25rem", "margin": "1.5rem" }, fontFamily: { "caption": ["Inter"], "label-eyebrow": ["Inter"], "headline-md": ["Newsreader"], "display": ["Newsreader"], "display-mobile": ["Newsreader"], "body-lg": ["Inter"], "label-code": ["JetBrains Mono"], "title-editorial": ["Newsreader"], "data-numeric": ["JetBrains Mono"], "headline-sm": ["Newsreader"], "headline-lg": ["Newsreader"], "body-sm": ["Inter"], "headline-lg-mobile": ["Newsreader"], "body-md": ["Inter"] }, fontSize: { "caption": ["0.75rem", { "lineHeight": "1.125rem", "fontWeight": "400" }], "label-eyebrow": ["0.6875rem", { "lineHeight": "1rem", "letterSpacing": "0.14em", "fontWeight": "600" }], "headline-md": ["1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "500" }], "display": ["2.75rem", { "lineHeight": "3.25rem", "letterSpacing": "-0.02em", "fontWeight": "400" }], "display-mobile": ["2rem", { "lineHeight": "2.5rem", "letterSpacing": "-0.015em", "fontWeight": "400" }], "body-lg": ["1rem", { "lineHeight": "1.6rem", "letterSpacing": "-0.005em", "fontWeight": "400" }], "label-code": ["0.8125rem", { "lineHeight": "1.25rem", "letterSpacing": "-0.01em", "fontWeight": "400" }], "title-editorial": ["1.125rem", { "lineHeight": "1.625rem", "fontWeight": "400" }], "data-numeric": ["0.875rem", { "lineHeight": "1.25rem", "letterSpacing": "0", "fontWeight": "500" }], "headline-sm": ["1.375rem", { "lineHeight": "1.75rem", "letterSpacing": "-0.005em", "fontWeight": "500" }], "headline-lg": ["2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.015em", "fontWeight": "400" }], "body-sm": ["0.8125rem", { "lineHeight": "1.35rem", "fontWeight": "400" }], "headline-lg-mobile": ["1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "400" }], "body-md": ["0.875rem", { "lineHeight": "1.45rem", "fontWeight": "400" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 inset-x-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-20 px-gutter flex items-center justify-between gap-space-sm"><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span><span class="font-label-eyebrow text-label-eyebrow uppercase text-secondary tracking-widest">AICTE Rule Engine v3.2</span></div><div class="flex items-baseline gap-space-xs"><h1 class="font-headline-sm text-headline-sm text-primary tracking-tight truncate">Pramāṇa AI</h1><span class="font-caption text-caption text-on-surface-variant truncate hidden sm:inline">/ Upload</span></div></div><div class="flex items-center gap-space-xs shrink-0"><button aria-label="Regulatory Reference Index" class="w-11 h-11 flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">menu_book</span></button><img alt="Profile" class="w-8 h-8 rounded-full object-cover shrink-0 ml-space-xs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6mBdOvrj3STQKYzqtoUhclbmVhx_bhpQ7Lf6gZa2hVkPimvUWwcSi41iwB5PDSAA54wGORFZQP6c_M8wUuGXqJsxGutdd1U6WDwx_MuOmcNe6IYB2pQ28zGJsYnm9_qfglgeyZDF9CTgsnAf52J_UlKtp0i20IvHtk9gCVeRSulWKGciOIVyW8d9SYKzUoj550bvXYpMUZ4KMjGAv4fw4_x-ynwKdvnSDPtjZu1ug29cXhO5KJoOqqg"/></div></div></header><main class="flex flex-col relative w-full px-gutter pt-20 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full pb-6 space-y-4">
+<!-- Archival Context Folio Header -->
+<section class="bg-surface-container-low rounded-lg p-space-md shadow-sm">
+<div class="flex items-center justify-between gap-space-sm mb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-data-numeric text-[11px] text-secondary font-medium tracking-wide">DOSSIER REF: PID/2025/EOA-0491</span>
+</div>
+<span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-label-code bg-secondary-container/60 text-on-secondary-container">
+        SUBMISSION STAGE 1/3
+      </span>
+</div>
+<div class="space-y-1">
+<h2 class="font-title-editorial text-title-editorial text-primary font-medium tracking-tight leading-snug">
+        Vishweshwaraya Institute of Technology &amp; Management
+      </h2>
+<div class="flex flex-wrap items-center gap-y-1 gap-x-2 text-on-surface-variant font-caption text-caption">
+<span class="font-label-code text-[11px] text-primary">PID: 1-93821094</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span>Academic Session 2025–26 (EoA)</span>
+</div>
+</div>
+<!-- Micro Metric Bar -->
+<div class="mt-space-md pt-space-sm bg-surface-container/60 rounded px-space-sm py-2">
+<div class="flex items-center justify-between font-caption text-[11px] text-on-surface-variant mb-1.5">
+<span class="font-label-eyebrow uppercase tracking-wider text-[10px] text-outline">Statutory Corpus Completeness</span>
+<span class="font-data-numeric text-primary font-medium">3 of 5 Filed (60%)</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden flex">
+<div class="h-full bg-primary" style="width: 20%;"></div>
+<div class="h-full bg-secondary-fixed-dim" style="width: 20%;"></div>
+<div class="h-full bg-error" style="width: 20%;"></div>
+<div class="h-full bg-primary-fixed-dim" style="width: 8%;"></div>
+<div class="h-full bg-surface-container-highest" style="width: 32%;"></div>
+</div>
+</div>
+</section>
+<!-- Dossier Document Checklist (Mobile Stack) -->
+<section class="bg-surface-container-lowest rounded-lg p-space-md shadow-sm space-y-3">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-eyebrow text-label-eyebrow uppercase text-outline block">Folio Section 01</span>
+<h3 class="font-headline-sm text-[1.125rem] text-primary leading-tight font-medium">Mandatory Schedule &amp; Proofs</h3>
+</div>
+<span class="font-caption text-caption text-secondary font-medium">AICTE APH 2025</span>
+</div>
+<div class="space-y-2" id="checklistContainer">
+<!-- Item 1: Verified -->
+<div class="p- space-sm rounded bg-surface-container-low transition-all">
+<div class="flex items-start justify-between gap-space-xs p-2.5">
+<div class="flex items-start gap-2.5 min-w-0">
+<span class="font-data-numeric text-xs text-outline shrink-0 mt-0.5">01.</span>
+<div class="min-w-0">
+<p class="font-body-md text-sm text-primary font-medium truncate">Trust/Society Registration Certificate</p>
+<div class="flex items-center gap-2 mt-0.5 font-caption text-[11px] text-on-surface-variant">
+<span class="font-label-code">PDF · 2.4 MB</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span>Sub-Registrar Blr-South</span>
+</div>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded font-label-code text-[10px] bg-primary/10 text-primary shrink-0">
+<span class="material-symbols-outlined text-[12px]">verified</span>
+            VERIFIED
+          </span>
+</div>
+</div>
+<!-- Item 2: Flawed Warning -->
+<div class="p- space-sm rounded bg-secondary-container/20 transition-all">
+<div class="flex items-start justify-between gap-space-xs p-2.5">
+<div class="flex items-start gap-2.5 min-w-0">
+<span class="font-data-numeric text-xs text-secondary shrink-0 mt-0.5">02.</span>
+<div class="min-w-0">
+<p class="font-body-md text-sm text-primary font-medium truncate">Land Registered Sale Deed / 30-Yr Lease</p>
+<div class="flex items-center gap-2 mt-0.5 font-caption text-[11px] text-on-surface-variant">
+<span class="font-label-code">PDF · 14.8 MB</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="text-secondary font-medium">String Discrepancy</span>
+</div>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded font-label-code text-[10px] bg-secondary-container text-on-secondary-fixed shrink-0">
+<span class="material-symbols-outlined text-[12px]">warning</span>
+            FLAWED
+          </span>
+</div>
+</div>
+<!-- Item 3: Critical Error -->
+<div class="p- space-sm rounded bg-error-container/30 transition-all">
+<div class="flex items-start justify-between gap-space-xs p-2.5">
+<div class="flex items-start gap-2.5 min-w-0">
+<span class="font-data-numeric text-xs text-error shrink-0 mt-0.5">03.</span>
+<div class="min-w-0">
+<p class="font-body-md text-sm text-primary font-medium truncate">State Fire &amp; Rescue Safety NOC</p>
+<div class="flex items-center gap-2 mt-0.5 font-caption text-[11px] text-error">
+<span class="font-label-code">PDF · 1.1 MB</span>
+<span class="w-1 h-1 rounded-full bg-error"></span>
+<span>Expired 12 Mar 2024</span>
+</div>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded font-label-code text-[10px] bg-error/10 text-error shrink-0">
+<span class="material-symbols-outlined text-[12px]">block</span>
+            DEFICIENT
+          </span>
+</div>
+</div>
+<!-- Item 4: Scanning in progress -->
+<div class="p- space-sm rounded bg-surface-container transition-all">
+<div class="p-2.5 space-y-2">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex items-start gap-2.5 min-w-0">
+<span class="font-data-numeric text-xs text-outline shrink-0 mt-0.5">04.</span>
+<div class="min-w-0">
+<p class="font-body-md text-sm text-primary font-medium truncate">Approved Building Plan &amp; Occupancy</p>
+<p class="font-caption text-[11px] text-on-surface-variant font-label-code">OCR Scan · Clause 5.2 Geometric Audit</p>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded font-label-code text-[10px] bg-primary-container text-on-primary shrink-0 animate-pulse">
+              SCANNING 68%
+            </span>
+</div>
+<!-- Progress hairline -->
+<div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden">
+<div class="bg-surface-tint h-1 rounded-full transition-all duration-300" style="width: 68%;"></div>
+</div>
+</div>
+</div>
+<!-- Item 5: Pending -->
+<div class="p- space-sm rounded bg-surface-container-low/60 transition-all opacity-85">
+<div class="flex items-start justify-between gap-space-xs p-2.5">
+<div class="flex items-start gap-2.5 min-w-0">
+<span class="font-data-numeric text-xs text-outline shrink-0 mt-0.5">05.</span>
+<div class="min-w-0">
+<p class="font-body-md text-sm text-on-surface-variant font-medium truncate">AICTE Faculty Cadre Ratio &amp; Form 16</p>
+<p class="font-caption text-[11px] text-outline">Awaiting upload of certified payroll schedules</p>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded font-label-code text-[10px] bg-surface-container-high text-on-surface-variant shrink-0">
+<span class="material-symbols-outlined text-[12px]">radio_button_unchecked</span>
+            PENDING
+          </span>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Drag-and-Drop / Tap Zone -->
+<section class="relative bg-surface-container-low rounded-lg p-space-md text-center shadow-sm overflow-hidden" id="dropZone">
+<input accept=".pdf,.tif,.tiff" class="hidden" id="statutoryFileInput" multiple="" type="file"/>
+<div class="py-4 px-2 space-y-3 cursor-pointer" onclick="document.getElementById('statutoryFileInput').click()">
+<div class="mx-auto w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-primary transition-transform active:scale-95">
+<span class="material-symbols-outlined text-[26px]">upload_file</span>
+</div>
+<div class="space-y-1">
+<h4 class="font-headline-sm text-base text-primary font-medium tracking-tight">
+          Deposit Statutory Records
+        </h4>
+<p class="font-body-sm text-xs text-on-surface-variant max-w-xs mx-auto">
+          Tap to select or drop official AICTE gazette proofs (PDF, TIFF up to 50MB)
+        </p>
+</div>
+<div class="pt-2 flex flex-col items-center gap-1">
+<span class="inline-flex items-center gap-1.5 font-label-code text-[10px] text-secondary tracking-wide uppercase px-2 py-0.5 bg-surface-container rounded">
+<span class="material-symbols-outlined text-[13px]">policy</span>
+          Visible seals &amp; Registrar signatures required
+        </span>
+<span class="font-caption text-[10px] text-outline">Automated cryptographic hashing (SHA-256) upon drop</span>
+</div>
+</div>
+</section>
+<!-- Real-time Scrutiny Pipeline Feed -->
+<section class="bg-surface-container-lowest rounded-lg p-space-md shadow-sm space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="inline-block w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<h3 class="font-headline-sm text-[1.125rem] text-primary font-medium">Scrutiny Feedback Stream</h3>
+</div>
+<span class="font-data-numeric text-[11px] text-outline">3 Insights Active</span>
+</div>
+<div class="space-y-2.5">
+<!-- Feed Card 1: Critical Error -->
+<div class="rounded-lg p-3 bg-error-container/20 space-y-2">
+<div class="flex items-center justify-between">
+<span class="inline-flex items-center gap-1 font-label-code text-[10px] text-error font-medium uppercase tracking-wider">
+<span class="material-symbols-outlined text-[13px]">error</span>
+            Deficiency Flag · Doc #03
+          </span>
+<span class="font-data-numeric text-[10px] text-error font-medium">APH Cl. 6.3</span>
+</div>
+<p class="font-body-sm text-xs text-on-surface leading-relaxed">
+<strong class="font-medium text-error">Fire NOC Expired:</strong> Certificate lapsed on <span class="font-data-numeric font-medium">12 Mar 2024</span>. AICTE requires validity through commencement date <span class="font-data-numeric font-medium">01 Aug 2025</span>. Renewal receipt or fresh order mandatory.
+        </p>
+<div class="pt-1 flex items-center justify-between">
+<button class="font-label-code text-[11px] text-error font-medium underline flex items-center gap-0.5 hover:opacity-80" type="button">
+            Replace File <span class="material-symbols-outlined text-[12px]">arrow_forward</span>
+</button>
+<span class="font-caption text-[10px] text-on-surface-variant">Immediate Disqualification Risk</span>
+</div>
+</div>
+<!-- Feed Card 2: Warning -->
+<div class="rounded-lg p-3 bg-secondary-container/30 space-y-2">
+<div class="flex items-center justify-between">
+<span class="inline-flex items-center gap-1 font-label-code text-[10px] text-secondary font-medium uppercase tracking-wider">
+<span class="material-symbols-outlined text-[13px]">rule</span>
+            Name Mismatch · Doc #02
+          </span>
+<span class="font-data-numeric text-[10px] text-secondary font-medium">Fuzzy Match 88.4%</span>
+</div>
+<p class="font-body-sm text-xs text-on-surface leading-relaxed">
+          Title variation detected in registered sale deed:
+          <span class="block my-1 font-label-code text-[11px] bg-surface-container-low p-1.5 rounded text-on-surface">
+            Deed: "Shri Vishwesharaya Edu Trust"<br/>
+            Portal: "Shri Vishweshwaraya Educational Trust"
+          </span>
+</p>
+<div class="pt-1 flex items-center justify-between">
+<button class="font-label-code text-[11px] text-secondary font-medium underline flex items-center gap-0.5 hover:opacity-80" type="button">
+            Attach Name Affidavit
+          </button>
+<span class="font-caption text-[10px] text-on-surface-variant">Scrutiny Committee Query Likely</span>
+</div>
+</div>
+<!-- Feed Card 3: Notice -->
+<div class="rounded-lg p-3 bg-surface-container space-y-1.5">
+<div class="flex items-center justify-between">
+<span class="inline-flex items-center gap-1 font-label-code text-[10px] text-primary font-medium uppercase tracking-wider">
+<span class="material-symbols-outlined text-[13px]">auto_fix_high</span>
+            Resolution Normalized · Doc #04
+          </span>
+<span class="font-data-numeric text-[10px] text-outline">150 DPI</span>
+</div>
+<p class="font-body-sm text-xs text-on-surface-variant leading-relaxed">
+          Building Plan scan enhanced via automated neural unwarping to preserve Town Planning Authority seal geometry.
+        </p>
+</div>
+</div>
+</section>
+<!-- Sticky Decision Affirmation Footer -->
+<section class="bg-surface-container-low rounded-lg p-space-md shadow-sm space-y-3">
+<div class="flex items-start gap-2 bg-surface-container p-2.5 rounded">
+<input class="mt-0.5 rounded border-outline text-primary focus:ring-0 cursor-pointer" id="affirmDiscrepancies" type="checkbox"/>
+<label class="font-caption text-[11px] text-on-surface-variant leading-tight cursor-pointer" for="affirmDiscrepancies">
+        I acknowledge 1 critical compliance failure and 1 entity title discrepancy before proceeding to council risk calculation.
+      </label>
+</div>
+<div class="flex flex-col gap-2 pt-1">
+<button class="w-full py-3 px-4 rounded bg-primary text-on-primary font-label-eyebrow text-xs tracking-wider uppercase font-medium flex items-center justify-center gap-2 opacity-50 cursor-not-allowed transition-all" disabled="" id="proceedBtn" type="button">
+<span>Proceed to Automated Risk Preview</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+<button class="w-full py-2.5 px-4 rounded bg-transparent text-primary font-body-sm text-xs font-medium hover:bg-surface-container transition-colors text-center" type="button">
+        Save Draft Dossier (Retain Hashed Buffers)
+      </button>
+</div>
+</section>
+</div>
+<script>
+  (function() {
+    const checkbox = document.getElementById('affirmDiscrepancies');
+    const proceedBtn = document.getElementById('proceedBtn');
+    const dropZone = document.getElementById('dropZone');
+    const fileInput = document.getElementById('statutoryFileInput');
+
+    if (checkbox && proceedBtn) {
+      checkbox.addEventListener('change', function() {
+        if (this.checked) {
+          proceedBtn.disabled = false;
+          proceedBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+          proceedBtn.classList.add('hover:bg-primary-container', 'shadow');
+        } else {
+          proceedBtn.disabled = true;
+          proceedBtn.classList.add('opacity-50', 'cursor-not-allowed');
+          proceedBtn.classList.remove('hover:bg-primary-container', 'shadow');
+        }
+      });
+    }
+
+    if (dropZone && fileInput) {
+      ['dragenter', 'dragover'].forEach(eventName => {
+        dropZone.addEventListener(eventName, (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          dropZone.classList.add('bg-surface-container-high');
+        }, false);
+      });
+
+      ['dragleave', 'drop'].forEach(eventName => {
+        dropZone.addEventListener(eventName, (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          dropZone.classList.remove('bg-surface-container-high');
+        }, false);
+      });
+
+      dropZone.addEventListener('drop', (e) => {
+        const dt = e.dataTransfer;
+        const files = dt.files;
+        if (files.length > 0) {
+          const banner = document.createElement('div');
+          banner.className = 'mt-2 p-2 bg-secondary-container/40 rounded text-center font-label-code text-[11px] text-on-secondary-fixed';
+          banner.innerText = `Ingesting ${files.length} gazette artifact(s)... Generating OCR manifest.`;
+          dropZone.appendChild(banner);
+          setTimeout(() => banner.remove(), 4000);
+        }
+      });
+
+      fileInput.addEventListener('change', function() {
+        if (this.files.length > 0) {
+          const banner = document.createElement('div');
+          banner.className = 'mt-2 p-2 bg-secondary-container/40 rounded text-center font-label-code text-[11px] text-on-secondary-fixed';
+          banner.innerText = `Ingesting ${this.files.length} gazette artifact(s)... Generating OCR manifest.`;
+          dropZone.appendChild(banner);
+          setTimeout(() => banner.remove(), 4000);
+        }
+      });
+    }
+  })();
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface/95 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.04)]" data-active-classes="text-primary font-medium"><div class="grid grid-cols-5 items-center h-16 px-space-xs"><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="overview" href="#"><span class="material-symbols-outlined text-[22px]">dashboard</span><span class="font-caption text-[10px] tracking-tight mt-0.5">Overview</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] py-1 transition-colors text-primary font-medium" data-path="upload" href="#"><span class="material-symbols-outlined text-[22px]">upload_file</span><span class="font-caption text-[10px] tracking-tight mt-0.5">Upload</span></a><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="summary" href="#"><span class="material-symbols-outlined text-[22px]">analytics</span><span class="font-caption text-[10px] tracking-tight mt-0.5">Summary</span></a><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="review" href="#"><span class="material-symbols-outlined text-[22px]">gavel</span><span class="font-caption text-[10px] tracking-tight mt-0.5">Review</span></a><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="matrix" href="#"><span class="material-symbols-outlined text-[22px]">compare_arrows</span><span class="font-caption text-[10px] tracking-tight mt-0.5">Matrix</span></a></div></nav></body></html>

@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-error": "#ffffff", "on-surface": "#1d1c16", "on-tertiary": "#ffffff", "surface-container": "#f2ede4", "surface": "#fef9f0", "primary": "#002627", "secondary-container": "#ffd79b", "on-tertiary-fixed": "#0f1d28", "on-primary-container": "#7da8a8", "on-secondary-fixed": "#281800", "inverse-surface": "#32302a", "outline": "#717978", "primary-fixed": "#beebeb", "error": "#ba1a1a", "surface-container-low": "#f8f3ea", "tertiary-fixed": "#d5e4f4", "on-primary-fixed-variant": "#224d4e", "on-surface-variant": "#404848", "on-primary-fixed": "#002020", "surface-container-highest": "#e7e2d9", "secondary": "#775928", "on-secondary": "#ffffff", "surface-variant": "#e7e2d9", "secondary-fixed-dim": "#e8c086", "on-secondary-container": "#7a5c2b", "primary-fixed-dim": "#a3cfcf", "on-error-container": "#93000a", "surface-dim": "#ded9d1", "surface-container-lowest": "#ffffff", "background": "#fef9f0", "surface-bright": "#fef9f0", "on-primary": "#ffffff", "on-tertiary-fixed-variant": "#3a4855", "tertiary-container": "#2a3844", "tertiary-fixed-dim": "#bac8d7", "error-container": "#ffdad6", "on-background": "#1d1c16", "primary-container": "#0f3d3e", "inverse-on-surface": "#f5f0e7", "surface-tint": "#3b6566", "tertiary": "#15232e", "on-secondary-fixed-variant": "#5d4213", "outline-variant": "#c0c8c8", "surface-container-high": "#ece8df", "secondary-fixed": "#ffdeae", "on-tertiary-container": "#93a1b0", "inverse-primary": "#a3cfcf" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "margin-md": "2.5rem", "space-lg": "1.5rem", "margin-lg": "4rem", "space-xl": "2.25rem", "gutter-lg": "2.5rem", "space-sm": "0.5rem", "gutter": "1.5rem", "space-md": "1rem", "space-xs": "0.25rem", "margin": "1.5rem" }, fontFamily: { "caption": ["Inter"], "label-eyebrow": ["Inter"], "headline-md": ["Newsreader"], "display": ["Newsreader"], "display-mobile": ["Newsreader"], "body-lg": ["Inter"], "label-code": ["JetBrains Mono"], "title-editorial": ["Newsreader"], "data-numeric": ["JetBrains Mono"], "headline-sm": ["Newsreader"], "headline-lg": ["Newsreader"], "body-sm": ["Inter"], "headline-lg-mobile": ["Newsreader"], "body-md": ["Inter"] }, fontSize: { "caption": ["0.75rem", { "lineHeight": "1.125rem", "fontWeight": "400" }], "label-eyebrow": ["0.6875rem", { "lineHeight": "1rem", "letterSpacing": "0.14em", "fontWeight": "600" }], "headline-md": ["1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "500" }], "display": ["2.75rem", { "lineHeight": "3.25rem", "letterSpacing": "-0.02em", "fontWeight": "400" }], "display-mobile": ["2rem", { "lineHeight": "2.5rem", "letterSpacing": "-0.015em", "fontWeight": "400" }], "body-lg": ["1rem", { "lineHeight": "1.6rem", "letterSpacing": "-0.005em", "fontWeight": "400" }], "label-code": ["0.8125rem", { "lineHeight": "1.25rem", "letterSpacing": "-0.01em", "fontWeight": "400" }], "title-editorial": ["1.125rem", { "lineHeight": "1.625rem", "fontWeight": "400" }], "data-numeric": ["0.875rem", { "lineHeight": "1.25rem", "letterSpacing": "0", "fontWeight": "500" }], "headline-sm": ["1.375rem", { "lineHeight": "1.75rem", "letterSpacing": "-0.005em", "fontWeight": "500" }], "headline-lg": ["2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.015em", "fontWeight": "400" }], "body-sm": ["0.8125rem", { "lineHeight": "1.35rem", "fontWeight": "400" }], "headline-lg-mobile": ["1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "400" }], "body-md": ["0.875rem", { "lineHeight": "1.45rem", "fontWeight": "400" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 inset-x-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-20 px-gutter flex items-center justify-between gap-space-sm"><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span><span class="font-label-eyebrow text-label-eyebrow uppercase text-secondary tracking-widest">AICTE Rule Engine v3.2</span></div><div class="flex items-baseline gap-space-xs"><h1 class="font-headline-sm text-headline-sm text-primary tracking-tight truncate">Pramāṇa AI</h1><span class="font-caption text-caption text-on-surface-variant truncate hidden sm:inline">/ Matrix</span></div></div><div class="flex items-center gap-space-xs shrink-0"><button aria-label="Regulatory Reference Index" class="w-11 h-11 flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">menu_book</span></button><img alt="Profile" class="w-8 h-8 rounded-full object-cover shrink-0 ml-space-xs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6mBdOvrj3STQKYzqtoUhclbmVhx_bhpQ7Lf6gZa2hVkPimvUWwcSi41iwB5PDSAA54wGORFZQP6c_M8wUuGXqJsxGutdd1U6WDwx_MuOmcNe6IYB2pQ28zGJsYnm9_qfglgeyZDF9CTgsnAf52J_UlKtp0i20IvHtk9gCVeRSulWKGciOIVyW8d9SYKzUoj550bvXYpMUZ4KMjGAv4fw4_x-ynwKdvnSDPtjZu1ug29cXhO5KJoOqqg"/></div></div></header><main class="flex flex-col relative w-full px-gutter pt-20 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full space-y-space-md">
+<!-- Archival Dossier Heading -->
+<div class="bg-surface-container p-space-md rounded-lg shadow-sm">
+<div class="flex items-center justify-between mb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-eyebrow text-label-eyebrow text-secondary uppercase tracking-widest">CHAPTER 05 / INVARIANT AUDIT</span>
+<span class="w-1 h-1 rounded-full bg-outline"></span>
+<span class="font-label-code text-caption text-on-surface-variant">FOLIO-AICTE-9810</span>
+</div>
+<span class="bg-secondary/10 text-secondary px-2 py-0.5 rounded font-label-code text-[11px] font-semibold tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">balance</span> SEAL VERIFIED
+      </span>
+</div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary tracking-tight">Cross-Document Forensic Consistency Matrix</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+      Automated entity resolution and invariant statutory validation synthesized across 5 regulatory instruments.
+    </p>
+<!-- Stat Bar Summary -->
+<div class="grid grid-cols-3 gap-space-xs mt-space-md pt-space-xs">
+<div class="bg-surface p-space-sm rounded">
+<span class="font-caption text-caption text-on-surface-variant block uppercase">Instruments</span>
+<span class="font-data-numeric text-data-numeric text-primary font-semibold">05 Validated</span>
+</div>
+<div class="bg-surface p-space-sm rounded">
+<span class="font-caption text-caption text-on-surface-variant block uppercase">Concordance</span>
+<span class="font-data-numeric text-data-numeric text-secondary font-semibold">68.4% Matched</span>
+</div>
+<div class="bg-surface p-space-sm rounded">
+<span class="font-caption text-caption text-on-surface-variant block uppercase">High Variance</span>
+<span class="font-data-numeric text-data-numeric text-error font-semibold">02 Flagged</span>
+</div>
+</div>
+</div>
+<!-- Interactive Matrix Table with Horizontal Scroll Tab Indicator -->
+<div class="flex flex-col space-y-space-xs">
+<div class="flex items-center justify-between px-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-secondary">drag_indicator</span>
+<span class="font-label-eyebrow text-label-eyebrow text-on-surface-variant uppercase tracking-wider">Comparative Ledger (Swipe to inspect)</span>
+</div>
+<span class="font-caption text-caption text-secondary flex items-center gap-0.5">
+<span>Tap row to view proof</span>
+<span class="material-symbols-outlined text-[14px]">arrow_downward</span>
+</span>
+</div>
+<!-- Scrollable Matrix Frame -->
+<div class="overflow-x-auto rounded-lg shadow-sm bg-surface-container-lowest">
+<table class="w-full text-left min-w-[760px]">
+<thead>
+<tr class="bg-surface-container text-on-surface font-label-eyebrow text-label-eyebrow uppercase tracking-wider">
+<th class="py-space-sm px-space-md sticky left-0 z-20 bg-surface-container w-44">Invariant Parameter</th>
+<th class="py-space-sm px-space-md w-44">Portal Declaration</th>
+<th class="py-space-sm px-space-md w-48">Land Title Deed</th>
+<th class="py-space-sm px-space-md w-44">Trust Certificate</th>
+<th class="py-space-sm px-space-md w-44">Fire NOC</th>
+<th class="py-space-sm px-space-md w-48">Municipality Sanction</th>
+</tr>
+</thead>
+<tbody class="font-label-code text-caption divide-y-0">
+<!-- Row 1: Trust / Society Name -->
+<tr class="cursor-pointer transition-colors bg-surface-container-low hover:bg-surface-container" id="row-1" onclick="selectMatrixRow(1)">
+<td class="py-space-sm px-space-md font-body-sm font-semibold text-primary sticky left-0 z-10 bg-inherit shadow-[2px_0_4px_rgba(0,0,0,0.02)]">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>01. Trust / Society Name</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md text-on-surface">
+<div class="font-semibold text-primary">Vishweshwaraya Education Trust</div>
+<span class="inline-block mt-0.5 text-[10px] text-primary px-1.5 py-0.2 bg-primary-fixed-dim/30 rounded">AFFIDAVIT DECLARED</span>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="bg-secondary-container/40 text-on-secondary-fixed p-1.5 rounded">
+<div class="font-semibold">Shri Vishweshwaraya Edu Trust</div>
+<div class="text-[10px] flex items-center gap-1 text-secondary mt-0.5">
+<span class="material-symbols-outlined text-[12px]">search</span> 88% Fuzzy Match
+                </div>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="bg-primary/5 text-primary p-1.5 rounded">
+<div class="font-semibold">Vishweshwaraya Education Trust</div>
+<div class="text-[10px] text-primary-container font-semibold mt-0.5">■ EXACT MATCH</div>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="bg-secondary-container/40 text-on-secondary-fixed p-1.5 rounded">
+<div class="font-semibold">VITM Campus</div>
+<div class="text-[10px] text-secondary mt-0.5">Campus Entity Alias</div>
+</div>
+</td>
+<td class="py-space-sm px-space-md text-on-surface-variant italic">
+              -- Not Appended --
+            </td>
+</tr>
+<!-- Row 2: Campus Land Area (Critical Conflict) -->
+<tr class="cursor-pointer transition-colors bg-error-container/20 hover:bg-error-container/30" id="row-2" onclick="selectMatrixRow(2)">
+<td class="py-space-sm px-space-md font-body-sm font-semibold text-error sticky left-0 z-10 bg-inherit shadow-[2px_0_4px_rgba(0,0,0,0.02)]">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-pulse"></span>
+<span>02. Campus Land Area</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="font-semibold text-primary">4.20 Acres</div>
+<span class="inline-block mt-0.5 text-[10px] text-on-surface-variant font-data-numeric">17,000 sq.m</span>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="bg-error-container text-on-error-container p-1.5 rounded">
+<div class="font-semibold text-error">2.40 Acres</div>
+<div class="text-[10px] font-semibold mt-0.5 flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">error</span> -1.80 ACRE DEFICIT
+                </div>
+</div>
+</td>
+<td class="py-space-sm px-space-md text-on-surface-variant italic">
+              -- Not Specified --
+            </td>
+<td class="py-space-sm px-space-md text-on-surface-variant">
+<span>9,712 sq.m (2.40 Ac)</span>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="bg-error-container text-on-error-container p-1.5 rounded">
+<div class="font-semibold text-error">2.40 Acres (Sanctioned)</div>
+<div class="text-[10px] mt-0.5">Discrepancy with Form</div>
+</div>
+</td>
+</tr>
+<!-- Row 3: Survey / Khasra No. -->
+<tr class="cursor-pointer transition-colors bg-surface-container-low hover:bg-surface-container" id="row-3" onclick="selectMatrixRow(3)">
+<td class="py-space-sm px-space-md font-body-sm font-semibold text-primary sticky left-0 z-10 bg-inherit shadow-[2px_0_4px_rgba(0,0,0,0.02)]">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>03. Survey / Khasra No.</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md text-on-surface">
+<div class="font-semibold">Sy. No. 142/1, 142/2</div>
+<span class="text-[10px] text-on-surface-variant">Revenue Cadastre</span>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="bg-primary/5 text-primary p-1.5 rounded">
+<div class="font-semibold">Sy. No. 142/1, 142/2</div>
+<div class="text-[10px] text-primary-container font-semibold mt-0.5">■ BOUNDARY PARALLEL</div>
+</div>
+</td>
+<td class="py-space-sm px-space-md text-on-surface-variant italic">
+              -- Not Applicable --
+            </td>
+<td class="py-space-sm px-space-md text-on-surface-variant">
+<span>Sy. No. 142/1, 142/2</span>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="bg-secondary-container/40 text-on-secondary-fixed p-1.5 rounded">
+<div class="font-semibold">Sy. No. 142/1</div>
+<div class="text-[10px] text-secondary mt-0.5">Sub-plot 142/2 Absent</div>
+</div>
+</td>
+</tr>
+<!-- Row 4: Authorized Signatory -->
+<tr class="cursor-pointer transition-colors bg-surface-container-low hover:bg-surface-container" id="row-4" onclick="selectMatrixRow(4)">
+<td class="py-space-sm px-space-md font-body-sm font-semibold text-primary sticky left-0 z-10 bg-inherit shadow-[2px_0_4px_rgba(0,0,0,0.02)]">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>04. Authorized Signatory</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md text-on-surface">
+<div class="font-semibold">Dr. K. S. Ramanathan</div>
+<span class="text-[10px] text-on-surface-variant">Chairman &amp; Trustee</span>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="bg-secondary-container/40 text-on-secondary-fixed p-1.5 rounded">
+<div class="font-semibold">Late Shri V. Ramanathan</div>
+<div class="text-[10px] text-secondary mt-0.5">Succession Deed Needed</div>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="bg-primary/5 text-primary p-1.5 rounded">
+<div class="font-semibold">Dr. K. S. Ramanathan</div>
+<div class="text-[10px] text-primary-container font-semibold mt-0.5">■ RESOLUTION CONFIRMED</div>
+</div>
+</td>
+<td class="py-space-sm px-space-md text-on-surface-variant">
+<span>Dr. K. S. Ramanathan</span>
+</td>
+<td class="py-space-sm px-space-md text-on-surface-variant">
+<span>Trustee Body</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Interactive Focus Switcher Chips -->
+<div class="flex items-center gap-space-xs overflow-x-auto py-1">
+<button class="px-space-sm py-1 bg-error-container text-on-error-container text-caption font-label-code rounded flex items-center gap-1 shrink-0" onclick="selectMatrixRow(2)">
+<span class="material-symbols-outlined text-[14px]">warning</span> Clause 02: Land Conflict
+    </button>
+<button class="px-space-sm py-1 bg-surface-container text-on-surface text-caption font-label-code rounded flex items-center gap-1 shrink-0" onclick="selectMatrixRow(1)">
+<span class="material-symbols-outlined text-[14px]">spellcheck</span> Clause 01: Trust Name
+    </button>
+<button class="px-space-sm py-1 bg-surface-container text-on-surface text-caption font-label-code rounded flex items-center gap-1 shrink-0" onclick="selectMatrixRow(3)">
+<span class="material-symbols-outlined text-[14px]">map</span> Clause 03: Survey Sub-plot
+    </button>
+<button class="px-space-sm py-1 bg-surface-container text-on-surface text-caption font-label-code rounded flex items-center gap-1 shrink-0" onclick="selectMatrixRow(4)">
+<span class="material-symbols-outlined text-[14px]">badge</span> Clause 04: Signatory Lineage
+    </button>
+</div>
+<!-- Forensic Cell Detail & Source Snippet Inspector -->
+<div class="bg-surface-container-lowest rounded-lg p-space-md shadow-md space-y-space-md" id="inspector-card">
+<div class="flex items-start justify-between">
+<div>
+<div class="flex items-center gap-space-xs mb-1">
+<span class="font-label-eyebrow text-label-eyebrow text-error uppercase tracking-wider">CRITICAL INVARIANT BREACH</span>
+<span class="bg-error/10 text-error px-1.5 py-0.5 rounded font-label-code text-[10px] font-semibold">DEFICIT -42.8%</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary" id="inspector-title">Parameter 02: Campus Land Area Variance</h3>
+</div>
+<span class="material-symbols-outlined text-secondary text-[24px]">verified_user</span>
+</div>
+<!-- Side-by-Side Dual Dossier Excerpt -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-sm">
+<!-- Snippet A: Portal Affidavit Entry -->
+<div class="bg-surface-container-low p-space-sm rounded">
+<div class="flex items-center justify-between pb-1 mb-1.5">
+<span class="font-label-eyebrow text-label-eyebrow text-primary uppercase">Source A: Self-Declaration Form</span>
+<span class="font-label-code text-[10px] text-on-surface-variant">PAGE 03, SEC 4.1</span>
+</div>
+<div class="bg-surface p-space-sm rounded font-label-code text-caption space-y-1">
+<div class="text-on-surface-variant">Parameter Field: <span class="text-primary font-semibold">Total Contiguous Land</span></div>
+<div class="text-headline-sm text-primary font-title-editorial font-semibold">4.20 Acres (182,952 sq.ft)</div>
+<p class="text-[11px] text-on-surface-variant font-caption italic">
+            "We confirm our institution holds clear uninterrupted ownership of 4.20 Acres at Survey 142/1 &amp; 142/2."
+          </p>
+</div>
+</div>
+<!-- Snippet B: Sub-Registrar Deed Scan Excerpt -->
+<div class="bg-surface-container-low p-space-sm rounded">
+<div class="flex items-center justify-between pb-1 mb-1.5">
+<span class="font-label-eyebrow text-label-eyebrow text-error uppercase">Source B: Registered Sale Deed</span>
+<span class="font-label-code text-[10px] text-on-surface-variant">VOL 412, PG 18</span>
+</div>
+<div class="bg-surface p-space-sm rounded font-label-code text-caption space-y-1">
+<div class="text-on-surface-variant">OCR Cadastral Schedule: <span class="text-error font-semibold">Schedule 'A' Excerpt</span></div>
+<div class="text-headline-sm text-error font-title-editorial font-semibold">2 Acres 16 Guntas (2.40 Acres)</div>
+<p class="text-[11px] text-on-surface-variant font-caption italic">
+            "All that piece and parcel measuring exactly 2.40 Acres bearing Sy. 142/1 bounded by East Canal road."
+          </p>
+</div>
+</div>
+</div>
+<!-- AI Model Verification Audit Narrative -->
+<div class="bg-surface-container p-space-sm rounded flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px] mt-0.5">smart_toy</span>
+<div class="flex flex-col space-y-0.5">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-code text-[11px] font-semibold text-primary">Consistency Engine v3.2</span>
+<span class="text-[10px] text-on-surface-variant">|</span>
+<span class="font-caption text-[11px] text-secondary font-medium">Confidence: 99.1%</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface" id="inspector-analysis">
+          Institutional declaration asserts 4.20 Acres, but instrument doc <span class="font-label-code text-caption text-primary">#DEED-1998-KA</span> and Municipal Sanction <span class="font-label-code text-caption text-primary">#BMP-SAN-44</span> certify title ownership of exclusively 2.40 Acres. AICTE Regulation Section 3.2.1 mandates a minimum of 3.50 Acres for non-metro engineering faculties.
+        </p>
+</div>
+</div>
+<!-- Inspector Resolution Controls -->
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+<span class="font-caption text-caption text-on-surface-variant">Status: Statutory Non-Compliance</span>
+</div>
+<button class="px-space-md py-1.5 bg-surface text-error text-caption font-semibold rounded shadow-sm hover:bg-error-container/20 transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">priority_high</span> Escalate to Inspection Committee
+      </button>
+</div>
+</div>
+<!-- Primary Archival Actions -->
+<div class="space-y-space-xs pt-space-xs">
+<button class="w-full py-space-sm px-space-md bg-primary-container text-on-primary font-body-sm font-semibold rounded shadow-sm hover:bg-tertiary transition-colors flex items-center justify-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Export Forensic Matrix (Cryptographically Signed PDF)</span>
+</button>
+<button class="w-full py-space-sm px-space-md bg-surface-container text-error font-body-sm font-semibold rounded shadow-sm hover:bg-error-container/30 transition-colors flex items-center justify-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px]">gavel</span>
+<span>Append All 4 Invariant Discrepancies to Scrutiny Report</span>
+</button>
+</div>
+</div>
+<script>
+  const rowData = {
+    1: {
+      title: "Parameter 01: Trust Entity Nomenclature Resolution",
+      status: "Fuzzy Semantic Equivalence (88%)",
+      statusClass: "text-secondary",
+      badgeText: "MINOR DISCREPANCY",
+      badgeClass: "bg-secondary/10 text-secondary",
+      sourceAField: "Trust Title Registered",
+      sourceAVal: "Vishweshwaraya Education Trust",
+      sourceADesc: "Submitted in AICTE Institutional Portal Self-Assessment Affidavit.",
+      sourceBField: "Land Conveyance Deed Title",
+      sourceBVal: "Shri Vishweshwaraya Edu Trust",
+      sourceBDesc: "Registered title deed uses abbreviation 'Edu' and prefix honorific 'Shri'.",
+      analysis: "Fuzzy semantic distance is within institutional tolerance threshold (Levenshtein distance 0.88). Recommended resolution: Procure supplementary amendment endorsement from registrar of societies to avoid nominal variance.",
+      statusText: "Status: Informational Clarification"
+    },
+    2: {
+      title: "Parameter 02: Campus Land Area Variance",
+      status: "Deficit Variance -42.8%",
+      statusClass: "text-error",
+      badgeText: "DEFICIT -42.8%",
+      badgeClass: "bg-error/10 text-error",
+      sourceAField: "Total Contiguous Land",
+      sourceAVal: "4.20 Acres (182,952 sq.ft)",
+      sourceADesc: "We confirm our institution holds clear uninterrupted ownership of 4.20 Acres at Survey 142/1 & 142/2.",
+      sourceBField: "Schedule 'A' Excerpt",
+      sourceBVal: "2 Acres 16 Guntas (2.40 Acres)",
+      sourceBDesc: "All that piece and parcel measuring exactly 2.40 Acres bearing Sy. 142/1 bounded by East Canal road.",
+      analysis: "Institutional declaration asserts 4.20 Acres, but instrument doc #DEED-1998-KA and Municipal Sanction #BMP-SAN-44 certify title ownership of exclusively 2.40 Acres. AICTE Regulation Section 3.2.1 mandates a minimum of 3.50 Acres for non-metro engineering faculties.",
+      statusText: "Status: Statutory Non-Compliance"
+    },
+    3: {
+      title: "Parameter 03: Cadastral Survey Division Alignment",
+      status: "Missing Parcel in Municipal Records",
+      statusClass: "text-secondary",
+      badgeText: "PARTIAL OMISSIONS",
+      badgeClass: "bg-secondary/10 text-secondary",
+      sourceAField: "Declared Revenue Plot",
+      sourceAVal: "Sy. No. 142/1 and 142/2",
+      sourceADesc: "Both contiguous revenue survey units declared under campus perimeter map.",
+      sourceBField: "Sanction Blueprint Reference",
+      sourceBVal: "Sy. No. 142/1 Exclusively",
+      sourceBDesc: "Municipal endorsement #BMP-SAN-44 lists Sy. 142/1 without reference to 142/2.",
+      analysis: "Sub-plot 142/2 represents 0.85 Acres. While accounted in the land purchase instrument, municipal zoning authorization lacks endorsement for parcel 142/2. Potential hazard for structural occupancy.",
+      statusText: "Status: Documentation Pending"
+    },
+    4: {
+      title: "Parameter 04: Signatory Execution Chain-of-Title",
+      status: "Succession Gap Identified",
+      statusClass: "text-secondary",
+      badgeText: "SUCCESSION ATTESTATION",
+      badgeClass: "bg-secondary/10 text-secondary",
+      sourceAField: "Active Statutory Signee",
+      sourceAVal: "Dr. K. S. Ramanathan",
+      sourceADesc: "Designated as Managing Trustee and Chairman in 2024 institutional filing.",
+      sourceBField: "1998 Registered Title Instrument",
+      sourceBVal: "Late Shri V. Ramanathan",
+      sourceBDesc: "Executed as Founder-Trustee in original registered conveyance instruments.",
+      analysis: "Lineage between original signatory (Late Shri V. Ramanathan) and currently declared head (Dr. K. S. Ramanathan) is corroborated by 2018 Trust Resolution #12, but probate or formal mutation decree is absent.",
+      statusText: "Status: Ancillary Document Required"
+    }
+  };
+
+  function selectMatrixRow(index) {
+    const data = rowData[index];
+    if (!data) return;
+
+    // Highlight row
+    [1, 2, 3, 4].forEach(i => {
+      const el = document.getElementById('row-' + i);
+      if (el) {
+        if (i === index) {
+          el.classList.add('bg-surface-container');
+        } else {
+          el.classList.remove('bg-surface-container');
+        }
+      }
+    });
+
+    const inspector = document.getElementById('inspector-card');
+    if (inspector) {
+      document.getElementById('inspector-title').textContent = data.title;
+      document.getElementById('inspector-analysis').innerHTML = data.analysis;
+      inspector.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+  }
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface/95 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.04)]" data-active-classes="text-primary font-medium"><div class="grid grid-cols-5 items-center h-16 px-space-xs"><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="overview" href="#"><span class="material-symbols-outlined text-[22px]">dashboard</span><span class="font-caption text-[10px] tracking-tight mt-0.5">Overview</span></a><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="upload" href="#"><span class="material-symbols-outlined text-[22px]">upload_file</span><span class="font-caption text-[10px] tracking-tight mt-0.5">Upload</span></a><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="summary" href="#"><span class="material-symbols-outlined text-[22px]">analytics</span><span class="font-caption text-[10px] tracking-tight mt-0.5">Summary</span></a><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="review" href="#"><span class="material-symbols-outlined text-[22px]">gavel</span><span class="font-caption text-[10px] tracking-tight mt-0.5">Review</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] py-1 transition-colors text-primary font-medium" data-path="matrix" href="#"><span class="material-symbols-outlined text-[22px]">compare_arrows</span><span class="font-caption text-[10px] tracking-tight mt-0.5">Matrix</span></a></div></nav></body></html>

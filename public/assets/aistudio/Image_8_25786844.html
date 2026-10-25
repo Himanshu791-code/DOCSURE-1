@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-error": "#ffffff", "on-surface": "#1d1c16", "on-tertiary": "#ffffff", "surface-container": "#f2ede4", "surface": "#fef9f0", "primary": "#002627", "secondary-container": "#ffd79b", "on-tertiary-fixed": "#0f1d28", "on-primary-container": "#7da8a8", "on-secondary-fixed": "#281800", "inverse-surface": "#32302a", "outline": "#717978", "primary-fixed": "#beebeb", "error": "#ba1a1a", "surface-container-low": "#f8f3ea", "tertiary-fixed": "#d5e4f4", "on-primary-fixed-variant": "#224d4e", "on-surface-variant": "#404848", "on-primary-fixed": "#002020", "surface-container-highest": "#e7e2d9", "secondary": "#775928", "on-secondary": "#ffffff", "surface-variant": "#e7e2d9", "secondary-fixed-dim": "#e8c086", "on-secondary-container": "#7a5c2b", "primary-fixed-dim": "#a3cfcf", "on-error-container": "#93000a", "surface-dim": "#ded9d1", "surface-container-lowest": "#ffffff", "background": "#fef9f0", "surface-bright": "#fef9f0", "on-primary": "#ffffff", "on-tertiary-fixed-variant": "#3a4855", "tertiary-container": "#2a3844", "tertiary-fixed-dim": "#bac8d7", "error-container": "#ffdad6", "on-background": "#1d1c16", "primary-container": "#0f3d3e", "inverse-on-surface": "#f5f0e7", "surface-tint": "#3b6566", "tertiary": "#15232e", "on-secondary-fixed-variant": "#5d4213", "outline-variant": "#c0c8c8", "surface-container-high": "#ece8df", "secondary-fixed": "#ffdeae", "on-tertiary-container": "#93a1b0", "inverse-primary": "#a3cfcf" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "margin-md": "2.5rem", "space-lg": "1.5rem", "margin-lg": "4rem", "space-xl": "2.25rem", "gutter-lg": "2.5rem", "space-sm": "0.5rem", "gutter": "1.5rem", "space-md": "1rem", "space-xs": "0.25rem", "margin": "1.5rem" }, fontFamily: { "caption": ["Inter"], "label-eyebrow": ["Inter"], "headline-md": ["Newsreader"], "display": ["Newsreader"], "display-mobile": ["Newsreader"], "body-lg": ["Inter"], "label-code": ["JetBrains Mono"], "title-editorial": ["Newsreader"], "data-numeric": ["JetBrains Mono"], "headline-sm": ["Newsreader"], "headline-lg": ["Newsreader"], "body-sm": ["Inter"], "headline-lg-mobile": ["Newsreader"], "body-md": ["Inter"] }, fontSize: { "caption": ["0.75rem", { "lineHeight": "1.125rem", "fontWeight": "400" }], "label-eyebrow": ["0.6875rem", { "lineHeight": "1rem", "letterSpacing": "0.14em", "fontWeight": "600" }], "headline-md": ["1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "500" }], "display": ["2.75rem", { "lineHeight": "3.25rem", "letterSpacing": "-0.02em", "fontWeight": "400" }], "display-mobile": ["2rem", { "lineHeight": "2.5rem", "letterSpacing": "-0.015em", "fontWeight": "400" }], "body-lg": ["1rem", { "lineHeight": "1.6rem", "letterSpacing": "-0.005em", "fontWeight": "400" }], "label-code": ["0.8125rem", { "lineHeight": "1.25rem", "letterSpacing": "-0.01em", "fontWeight": "400" }], "title-editorial": ["1.125rem", { "lineHeight": "1.625rem", "fontWeight": "400" }], "data-numeric": ["0.875rem", { "lineHeight": "1.25rem", "letterSpacing": "0", "fontWeight": "500" }], "headline-sm": ["1.375rem", { "lineHeight": "1.75rem", "letterSpacing": "-0.005em", "fontWeight": "500" }], "headline-lg": ["2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.015em", "fontWeight": "400" }], "body-sm": ["0.8125rem", { "lineHeight": "1.35rem", "fontWeight": "400" }], "headline-lg-mobile": ["1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "400" }], "body-md": ["0.875rem", { "lineHeight": "1.45rem", "fontWeight": "400" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 inset-x-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-20 px-gutter flex items-center justify-between gap-space-sm"><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span><span class="font-label-eyebrow text-label-eyebrow uppercase text-secondary tracking-widest">AICTE Rule Engine v3.2</span></div><div class="flex items-baseline gap-space-xs"><h1 class="font-headline-sm text-headline-sm text-primary tracking-tight truncate">Pramāṇa AI</h1><span class="font-caption text-caption text-on-surface-variant truncate hidden sm:inline">/ Overview</span></div></div><div class="flex items-center gap-space-xs shrink-0"><button aria-label="Regulatory Reference Index" class="w-11 h-11 flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">menu_book</span></button><img alt="Profile" class="w-8 h-8 rounded-full object-cover shrink-0 ml-space-xs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6mBdOvrj3STQKYzqtoUhclbmVhx_bhpQ7Lf6gZa2hVkPimvUWwcSi41iwB5PDSAA54wGORFZQP6c_M8wUuGXqJsxGutdd1U6WDwx_MuOmcNe6IYB2pQ28zGJsYnm9_qfglgeyZDF9CTgsnAf52J_UlKtp0i20IvHtk9gCVeRSulWKGciOIVyW8d9SYKzUoj550bvXYpMUZ4KMjGAv4fw4_x-ynwKdvnSDPtjZu1ug29cXhO5KJoOqqg"/></div></div></header><main class="flex flex-col relative w-full px-gutter pt-20 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Section 1: Hero & Archival Editorial Lead -->
+<section class="flex flex-col gap-space-md pt-2 pb-space-lg">
+<!-- Eyebrow Badge & Seal -->
+<div class="flex items-center justify-between gap-space-sm">
+<div class="inline-flex items-center gap-space-xs bg-surface-container px-2.5 py-1 rounded">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-eyebrow text-label-eyebrow uppercase text-secondary tracking-widest">Official AICTE Regulatory Audit System</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified</span>
+<span class="font-label-code text-caption tracking-tight">APH 2024–25</span>
+</div>
+</div>
+<!-- Editorial Serif Headline -->
+<div class="flex flex-col gap-space-xs">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary tracking-tight">
+        Every document, <span class="italic font-normal text-secondary">read carefully</span>. Every flag, explained.
+      </h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+        An explainable, human-in-the-loop validation intelligence engineered for institutional affiliation, land title scrutiny, and statutory compliance.
+      </p>
+</div>
+<!-- Interactive Call to Action Stack -->
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<button class="w-full h-12 bg-primary text-on-primary font-body-md font-medium rounded flex items-center justify-center gap-space-xs shadow-sm active:opacity-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[20px]">document_scanner</span>
+<span>Start Institutional Validation</span>
+</button>
+<button class="w-full h-11 bg-surface-container text-on-surface font-body-md font-medium rounded flex items-center justify-center gap-space-xs active:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">analytics</span>
+<span class="text-secondary">View Sample Audit Folio (NIT-084)</span>
+</button>
+</div>
+</section>
+<!-- Section 2: Forensic Document Inspection Preview -->
+<section class="flex flex-col gap-space-sm pb-space-xl">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="font-label-code text-caption text-secondary font-semibold">§ 02.4</span>
+<span class="font-label-eyebrow text-label-eyebrow uppercase text-on-surface-variant">Forensic Evidence Scrutiny</span>
+</div>
+<span class="font-label-code text-[11px] text-error font-medium bg-error-container/40 px-2 py-0.5 rounded">
+        Deficiency Detected
+      </span>
+</div>
+<!-- Simulated Archival Folio / Certificate Mockup -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-md shadow-sm relative overflow-hidden">
+<!-- Watermark Stamp / Header in Parchment Paper Style -->
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex flex-col min-w-0">
+<span class="font-label-eyebrow text-[9px] uppercase tracking-wider text-on-surface-variant">Government of Karnataka — Dept. of Revenue</span>
+<span class="font-headline-sm text-title-editorial text-primary truncate">Land Conversion Order No. LND-CR-892/2019-20</span>
+<span class="font-label-code text-[11px] text-outline">Khata: 104/A-12 • Hobli: Yelahanka • Devanahalli Sub-Dist</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary text-[22px]">policy</span>
+</div>
+</div>
+<!-- Scanned Extract Table with Discrepancy Highlight -->
+<div class="bg-surface-container-lowest rounded p-space-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-caption font-caption text-on-surface-variant pb-1">
+<span>Declared Parcel Details</span>
+<span class="font-label-code text-[10px]">OCR CONFIDENCE: 98.4%</span>
+</div>
+<div class="grid grid-cols-2 gap-space-xs text-body-sm">
+<div class="flex flex-col bg-surface-container p-2 rounded">
+<span class="font-caption text-[11px] text-on-surface-variant">Survey Identification</span>
+<span class="font-data-numeric text-data-numeric text-on-surface">Sy. No. 142/2B &amp; 142/3</span>
+</div>
+<div class="flex flex-col bg-surface-container p-2 rounded">
+<span class="font-caption text-[11px] text-on-surface-variant">Tenure Classification</span>
+<span class="font-body-sm text-on-surface">Private Institutional</span>
+</div>
+</div>
+<!-- Discrepant Land Area Flag Card -->
+<div class="relative mt-1 bg-secondary-container/25 rounded p-2.5 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">crop_free</span>
+<div class="flex flex-col">
+<span class="font-caption text-[11px] text-on-surface-variant">Certified Converted Area</span>
+<span class="font-data-numeric text-body-lg text-primary font-semibold">4.20 ACRES</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-error text-on-error font-label-code text-[10px] tracking-tight">
+            AMBIGUOUS OVERLAY
+          </span>
+</div>
+</div>
+<!-- Associated Explanatory Flag Callout -->
+<div class="bg-surface-container-highest rounded p-space-sm flex gap-space-sm items-start">
+<span class="material-symbols-outlined text-error text-[20px] shrink-0 mt-0.5">report_problem</span>
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center justify-between gap-1">
+<span class="font-label-eyebrow text-[10px] uppercase tracking-wider text-error font-semibold">Statutory Clause Breach 4.14(b)</span>
+<span class="font-label-code text-[10px] text-on-surface-variant">Ref: Sale Deed #7192</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface leading-tight">
+            Area value deviates from primary Registered Title Deed. Registered conveyance grants <strong class="font-medium text-primary">2.40 acres</strong>, whereas conversion declaration claims <strong class="font-medium text-primary">4.20 acres</strong>. Difference: <span class="font-data-numeric text-error font-medium">+1.80 acres unaccounted</span>.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: Trust Badges / Evidentiary Tenets -->
+<section class="flex flex-col gap-space-sm pb-space-lg">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-code text-caption text-secondary font-semibold">§ 03.0</span>
+<span class="font-label-eyebrow text-label-eyebrow uppercase text-on-surface-variant">Archival System Standards</span>
+</div>
+<div class="grid grid-cols-2 gap-space-xs">
+<div class="bg-surface-container-low p-space-sm rounded-xl flex flex-col gap-1">
+<span class="material-symbols-outlined text-primary text-[20px]">person_check</span>
+<span class="font-headline-sm text-[13px] text-primary">Human-in-Loop</span>
+<span class="font-caption text-caption text-on-surface-variant leading-snug">Deterministic adjudications only finalized by statutory officers.</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-xl flex flex-col gap-1">
+<span class="material-symbols-outlined text-primary text-[20px]">fingerprint</span>
+<span class="font-headline-sm text-[13px] text-primary">Tamper-Evident</span>
+<span class="font-caption text-caption text-on-surface-variant leading-snug">Cryptographic SHA-256 ledger chaining for every inspection audit.</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-xl flex flex-col gap-1">
+<span class="material-symbols-outlined text-primary text-[20px]">security</span>
+<span class="font-headline-sm text-[13px] text-primary">Encrypted Vault</span>
+<span class="font-caption text-caption text-on-surface-variant leading-snug">Air-gapped data residency compliant with Indian IT Act Section 43A.</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-xl flex flex-col gap-1">
+<span class="material-symbols-outlined text-primary text-[20px]">model_training</span>
+<span class="font-headline-sm text-[13px] text-primary">Synthetic Grounding</span>
+<span class="font-caption text-caption text-on-surface-variant leading-snug">Calibrated on 14,000+ gazetted land conversion &amp; NOC rubrics.</span>
+</div>
+</div>
+</section>
+<!-- Section 4: 9-Step Verification Pipeline -->
+<section class="flex flex-col gap-space-md pb-space-xl">
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-code text-caption text-secondary font-semibold">§ 04.0</span>
+<span class="font-label-eyebrow text-label-eyebrow uppercase text-on-surface-variant">The 9-Step Protocol</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Systematic Scrutiny Trajectory</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Linear evidentiary decomposition from initial intake to final committee sign-off.</p>
+</div>
+<!-- Vertical Timeline Cards -->
+<div class="flex flex-col gap-space-xs relative">
+<!-- 01 Intake -->
+<div class="bg-surface-container-low p-3 rounded-lg flex items-start gap-space-sm">
+<span class="font-label-code text-data-numeric text-secondary font-semibold">01</span>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-title-editorial text-[15px] text-primary">Ingest Dossier</span>
+<span class="font-label-code text-[10px] text-on-surface-variant bg-surface-container px-1.5 py-0.5 rounded">PDF / TIFF / JPEG</span>
+</div>
+<span class="font-caption text-caption text-on-surface-variant">Multipage bundle submission via secure institution gateway.</span>
+</div>
+</div>
+<!-- 02 Pre-process -->
+<div class="bg-surface-container-low p-3 rounded-lg flex items-start gap-space-sm">
+<span class="font-label-code text-data-numeric text-secondary font-semibold">02</span>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-title-editorial text-[15px] text-primary">Pre-Processing</span>
+<span class="font-label-code text-[10px] text-on-surface-variant bg-surface-container px-1.5 py-0.5 rounded">Deskew &amp; Clean</span>
+</div>
+<span class="font-caption text-caption text-on-surface-variant">Geometric deskewing, stamp isolation, resolution standardization.</span>
+</div>
+</div>
+<!-- 03 Classify -->
+<div class="bg-surface-container-low p-3 rounded-lg flex items-start gap-space-sm">
+<span class="font-label-code text-data-numeric text-secondary font-semibold">03</span>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-title-editorial text-[15px] text-primary">Statutory Classify</span>
+<span class="font-label-code text-[10px] text-on-surface-variant bg-surface-container px-1.5 py-0.5 rounded">Type Matching</span>
+</div>
+<span class="font-caption text-caption text-on-surface-variant">Sorts Land Deeds, Building NOCs, Fire Approvals &amp; Affidavits.</span>
+</div>
+</div>
+<!-- 04 OCR & Extract -->
+<div class="bg-surface-container-low p-3 rounded-lg flex items-start gap-space-sm">
+<span class="font-label-code text-data-numeric text-secondary font-semibold">04</span>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-title-editorial text-[15px] text-primary">Multilingual OCR</span>
+<span class="font-label-code text-[10px] text-on-surface-variant bg-surface-container px-1.5 py-0.5 rounded">Regional + English</span>
+</div>
+<span class="font-caption text-caption text-on-surface-variant">Deep character parsing for Kannada, Devanagari, Tamil &amp; English seals.</span>
+</div>
+</div>
+<!-- 05 Authenticity -->
+<div class="bg-surface-container-low p-3 rounded-lg flex items-start gap-space-sm">
+<span class="font-label-code text-data-numeric text-secondary font-semibold">05</span>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-title-editorial text-[15px] text-primary">Authenticity Check</span>
+<span class="font-label-code text-[10px] text-on-surface-variant bg-surface-container px-1.5 py-0.5 rounded">Forensic Level</span>
+</div>
+<span class="font-caption text-caption text-on-surface-variant">QR payload decoders, digital signature chain verification &amp; splicing alerts.</span>
+</div>
+</div>
+<!-- 06 Consistency -->
+<div class="bg-surface-container-low p-3 rounded-lg flex items-start gap-space-sm">
+<span class="font-label-code text-data-numeric text-secondary font-semibold">06</span>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-title-editorial text-[15px] text-primary">Cross-Consistency</span>
+<span class="font-label-code text-[10px] text-secondary font-semibold bg-secondary-container/40 px-1.5 py-0.5 rounded">Cross-Correlate</span>
+</div>
+<span class="font-caption text-caption text-on-surface-variant">Synchronizes Trust names, Khata IDs, survey numbers across all 18 certificates.</span>
+</div>
+</div>
+<!-- 07 Compliance -->
+<div class="bg-surface-container-low p-3 rounded-lg flex items-start gap-space-sm">
+<span class="font-label-code text-data-numeric text-secondary font-semibold">07</span>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-title-editorial text-[15px] text-primary">AICTE Handbook</span>
+<span class="font-label-code text-[10px] text-on-surface-variant bg-surface-container px-1.5 py-0.5 rounded">APH Clauses</span>
+</div>
+<span class="font-caption text-caption text-on-surface-variant">Validates FAR ratios, setback standards, and minimum acreage requirements.</span>
+</div>
+</div>
+<!-- 08 Risk Score -->
+<div class="bg-surface-container-low p-3 rounded-lg flex items-start gap-space-sm">
+<span class="font-label-code text-data-numeric text-secondary font-semibold">08</span>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-title-editorial text-[15px] text-primary">Explainable Scoring</span>
+<span class="font-label-code text-[10px] text-on-surface-variant bg-surface-container px-1.5 py-0.5 rounded">Weighted Metric</span>
+</div>
+<span class="font-caption text-caption text-on-surface-variant">Constructs evidentiary tree citing specific statutes for any flagged variance.</span>
+</div>
+</div>
+<!-- 09 Officer Review -->
+<div class="bg-surface-container-high p-3 rounded-lg flex items-start gap-space-sm">
+<span class="font-label-code text-data-numeric text-primary font-bold">09</span>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-title-editorial text-[15px] text-primary font-medium">Officer Adjudication</span>
+<span class="font-label-code text-[10px] text-on-primary bg-primary px-1.5 py-0.5 rounded">Final Seal</span>
+</div>
+<span class="font-caption text-caption text-on-surface-variant">Appointed regional scrutiny officer accepts, overrides, or requests remap.</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 5: What We Check (3 Forensic Domains) -->
+<section class="flex flex-col gap-space-md pb-space-xl">
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-code text-caption text-secondary font-semibold">§ 05.0</span>
+<span class="font-label-eyebrow text-label-eyebrow uppercase text-on-surface-variant">Forensic Dimensions</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Tripartite Scrutiny Model</h3>
+</div>
+<!-- Domain Card 1: Authenticity -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-space-xs shadow-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">verified_user</span>
+<h4 class="font-title-editorial text-title-editorial text-primary">Document Authenticity</h4>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Forensic assessment of digital integrity and physical cert provenance.</p>
+<div class="flex flex-col gap-1.5 pt-1">
+<div class="flex items-center gap-2 font-caption text-caption text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>Metadata history forensics &amp; font forgery detection</span>
+</div>
+<div class="flex items-center gap-2 font-caption text-caption text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>Cryptographic QR signature decoding vs State Registry</span>
+</div>
+<div class="flex items-center gap-2 font-caption text-caption text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>Multi-institution deed reuse &amp; cross-state collusive sharing</span>
+</div>
+</div>
+</div>
+<!-- Domain Card 2: Consistency -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-space-xs shadow-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">sync_alt</span>
+<h4 class="font-title-editorial text-title-editorial text-primary">Entity Consistency</h4>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Cross-document verification of legal entity identities and geographic descriptors.</p>
+<div class="flex flex-col gap-1.5 pt-1">
+<div class="flex items-center gap-2 font-caption text-caption text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>Fuzzy matching of Society/Trust registered naming variants</span>
+</div>
+<div class="flex items-center gap-2 font-caption text-caption text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>Survey number continuity between Conversion, Patta &amp; Sale Deeds</span>
+</div>
+<div class="flex items-center gap-2 font-caption text-caption text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>Cadastral parcel shape and contiguous parcel boundary parity</span>
+</div>
+</div>
+</div>
+<!-- Domain Card 3: Compliance -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-space-xs shadow-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">gavel</span>
+<h4 class="font-title-editorial text-title-editorial text-primary">Statutory AICTE Compliance</h4>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Deterministic checks against the active Approval Process Handbook (2024–25).</p>
+<div class="flex flex-col gap-1.5 pt-1">
+<div class="flex items-center gap-2 font-caption text-caption text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>Urban / Rural minimum contiguous land acreage thresholds</span>
+</div>
+<div class="flex items-center gap-2 font-caption text-caption text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>Clear 30-year leasehold encumbrance certificate continuity</span>
+</div>
+<div class="flex items-center gap-2 font-caption text-caption text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>Occupancy Certificate (OC) validity vs proposed built-up square footage</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 6: Dual Value Proposition (Institutions vs Scrutiny Officers) -->
+<section class="flex flex-col gap-space-md pb-space-xl">
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-code text-caption text-secondary font-semibold">§ 06.0</span>
+<span class="font-label-eyebrow text-label-eyebrow uppercase text-on-surface-variant">Dual-Stakeholder Utility</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Purpose-Engineered Interfaces</h3>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- For Institutions -->
+<div class="bg-surface-container p-space-md rounded-xl flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-eyebrow text-label-eyebrow uppercase text-secondary">Pre-Submission Auditing</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">account_balance</span>
+</div>
+<h4 class="font-title-editorial text-title-editorial text-primary">For Academic Institutions</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Identify and remediate conflicting declarations, outdated encumbrance certificates, or mismatching survey boundaries weeks before the statutory filing deadline. Prevent surprise rejection notes.
+        </p>
+</div>
+<!-- For Scrutiny Officers -->
+<div class="bg-primary text-on-primary p-space-md rounded-xl flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-eyebrow text-label-eyebrow uppercase text-primary-fixed">Statutory Committee View</span>
+<span class="material-symbols-outlined text-primary-fixed text-[20px]">fact_check</span>
+</div>
+<h4 class="font-title-editorial text-title-editorial text-on-primary">For AICTE Scrutiny Officers</h4>
+<p class="font-body-sm text-body-sm text-surface-container-high">
+          Condense hours of manual cross-referencing into a highlighted 3-minute briefing. Zero in on questionable parcel conversions with direct citations to legal statutes and OCR diffs.
+        </p>
+</div>
+</div>
+</section>
+<!-- Section 7: Statutory Caveat & Legal Notice -->
+<section class="pb-space-xl">
+<div class="bg-surface-container-low p-space-md rounded-xl flex gap-space-sm items-start">
+<span class="material-symbols-outlined text-secondary text-[22px] shrink-0 mt-0.5">info</span>
+<div class="flex flex-col gap-1">
+<span class="font-label-eyebrow text-[10px] uppercase tracking-wider text-secondary font-semibold">Statutory Evidentiary Caveat</span>
+<p class="font-caption text-caption text-on-surface leading-relaxed">
+          Pramāṇa AI risk scores and discrepancy highlights are evidentiary indicators engineered strictly to assist appointed AICTE Scrutiny Committees and Regional Officers. They do not constitute a final administrative determination of approval, deficiency, or fraud. Administrative decisions remain under the sovereign purview of AICTE statutory provisions.
+        </p>
+</div>
+</div>
+</section>
+<!-- Section 8: Deep Ink Archival Colophon / Footer -->
+<footer class="bg-tertiary text-on-tertiary -mx-gutter px-gutter py-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-title-editorial text-title-editorial tracking-tight text-white">Pramāṇa AI</span>
+<span class="font-caption text-[11px] text-on-tertiary-container">AICTE Regulatory Verification Suite</span>
+</div>
+<div class="w-8 h-8 rounded-full bg-tertiary-container flex items-center justify-center text-primary-fixed font-label-code text-caption">
+        3.2
+      </div>
+</div>
+<div class="flex flex-col gap-1 text-on-tertiary-container font-caption text-caption">
+<span>AICTE Approval Process Handbook (APH) 2024–25 Certified Protocol</span>
+<span>National Informatics Centre (NIC) Interoperable Data Standards</span>
+<span class="text-[10px] text-outline-variant pt-2">© 2025 All Rights Reserved. Sovereign Scrutiny Engine.</span>
+</div>
+</footer>
+</div></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface/95 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.04)]" data-active-classes="text-primary font-medium"><div class="grid grid-cols-5 items-center h-16 px-space-xs"><a aria-current="page" class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] py-1 transition-colors text-primary font-medium" data-path="overview" href="#"><span class="material-symbols-outlined text-[22px]">dashboard</span><span class="font-caption text-[10px] tracking-tight mt-0.5">Overview</span></a><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="upload" href="#"><span class="material-symbols-outlined text-[22px]">upload_file</span><span class="font-caption text-[10px] tracking-tight mt-0.5">Upload</span></a><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="summary" href="#"><span class="material-symbols-outlined text-[22px]">analytics</span><span class="font-caption text-[10px] tracking-tight mt-0.5">Summary</span></a><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="review" href="#"><span class="material-symbols-outlined text-[22px]">gavel</span><span class="font-caption text-[10px] tracking-tight mt-0.5">Review</span></a><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="matrix" href="#"><span class="material-symbols-outlined text-[22px]">compare_arrows</span><span class="font-caption text-[10px] tracking-tight mt-0.5">Matrix</span></a></div></nav></body></html>

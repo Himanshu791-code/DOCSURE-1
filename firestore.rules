@@ -1,0 +1,94 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Default-deny catch-all
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isCurrentUser(uid) {
+      return isSignedIn() && request.auth.uid == uid;
+    }
+
+    function getUser() {
+      return get(/databases/$(database)/documents/users/$(request.auth.uid)).data;
+    }
+
+    function hasUserDoc() {
+      return isSignedIn() && exists(/databases/$(database)/documents/users/$(request.auth.uid));
+    }
+
+    function isAdmin() {
+      return isSignedIn() && (
+        request.auth.token.email == "laldashimanshu@gmail.com" ||
+        (hasUserDoc() && getUser().role == 'admin')
+      );
+    }
+
+    function isOfficer() {
+      return isSignedIn() && (
+        isAdmin() ||
+        (hasUserDoc() && getUser().role == 'officer')
+      );
+    }
+
+    // User accounts
+    match /users/{userId} {
+      allow read: if true;
+      allow create, update: if true;
+      allow delete: if isAdmin();
+    }
+
+    // Institutions (Regulatory public & demonstration records)
+    match /institutions/{institutionId} {
+      allow read: if true;
+      allow write: if true;
+    }
+
+    // Applications & Statutory Audit Dockets
+    match /applications/{applicationId} {
+      allow read: if true;
+      allow create: if true;
+      allow update: if true;
+      allow delete: if isAdmin();
+
+      // Documents subcollection
+      match /documents/{documentId} {
+        allow read: if true;
+        allow create, update: if true;
+        allow delete: if isOfficer() || isAdmin();
+      }
+
+      // Consistency checks subcollection
+      match /consistency_checks/{checkId} {
+        allow read: if true;
+        allow create, update, delete: if true;
+      }
+
+      // Adjudications subcollection
+      match /adjudications/{adjudicationId} {
+        allow read: if true;
+        allow create, update: if true;
+        allow delete: if isAdmin();
+      }
+    }
+
+    // Test connection endpoint
+    match /test/{testId} {
+      allow read, write: if true;
+    }
+
+    // Audit logs (strictly immutable audit trail)
+    match /audit_logs/{logId} {
+      allow read: if true;
+      allow create: if true;
+      allow update, delete: if false;
+    }
+  }
+}
